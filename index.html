@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>COVID-19 App</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: orange;
+    }
+    
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #title {
+      width: 100%;
+      max-width: 1200px;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #message-container {
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    #message-container div {
+      font-size: 40px;
+      padding: 10;
+      margin: 10;
+      /* background-color:darkorange; */
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #message-container div:nth-child(2n) {
+      font-size: 40px;
+      background-color: orange;
+    }
+
+    #send-container {
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      /* background-color: white; */
+      max-width: 200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="message-container">
+    <h1 id="title"> 😢 HOW MANY CONFIRMED C🦠VID-19 CASES IN YOUR CITY? 💪💪🏻💪🏼💪🏽💪🏾💪🏿🦾 ANY WORDS TO OTHER PEOPLE?  </h1>
+  </div>
+  <form id="send-container">
+    <input type="text" id="message-input">
+    <button type="submit" id="send-button">Send</button>
+  </form>
+</body>
+</html>
